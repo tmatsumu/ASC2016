@@ -57,7 +57,7 @@
 % \documentclass[journal]{../sty/IEEEtran}
 
 
-
+\usepackage{graphicx}
 
 
 % Some very useful LaTeX packages include:
@@ -490,23 +490,69 @@ We also measure to estimate the levitating rotor temperature using this holder m
 \begin{table}[htbp]
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
-   \begin{tabular}{c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
-	    & Diameter [mm] & $a_0$ & $a_1$  \\ \hline
-Rotor1 &   &   &     \\
-Rotor1 &   &   &     \\
-Rotor2 &   &   &     \\
+   \begin{tabular}{c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
+	    & Diameter [mm] & $h$ [mm] & $a_0$ & $a_1$  \\ \hline
+Rotor1 &  *85~mm* &   &  &     \\
+Rotor1 & *85~mm* &   &   &    \\
+Rotor2 & *360~mm*  &   &    &   \\
    \end{tabular}
-   \caption{Remember, \emph{never} use vertical lines in tables.}
+   \caption{Check the exact diameter.}
    \label{tab:booktabs}
 \end{table}
 
-\section{Temperature monitoring strategy}
-The rotor magnet is held by the three grippers when the SMB is cooled from the room temperature to 6 K. The YBCO is field-cooled with the rotor magnetic field. Once the rotor is thermalized by the conduction with the gripper arm, the rotor is released and starts levitating. Once the rotor is levitating, the rotor temperature is difficult to estimate. We develop the calibration scheme to estimate the rotor temperature by using a thermometer mounted at the gripper arm.
+\section{Thermal conductance through the holder mechanism}
+The prototype SMB system is constructed. 
+The detailed description of this prototype system is in Matsumura et al.~\cite{}. 
+The entire system is enclosed in a GM cryostat and cooled down to the lowest temperature of about 6~K.
+
+The cooling sequence is following. 
+The rotor magnet is held by the three grippers when the SMB is cooled from the room temperature to the temperature of about 6~K. 
+The YBCO is field-cooled by the magnetic field of the rotor. 
+Once the rotor is thermalized by the conduction through the three gripper arms, the rotor is released and it levitates. 
 
 \subsection{Thermal conductivity of the holder mechanism}
+The thermal conductance between the stator and the rotor during the cool down process is purely limited by the physical contact of the holder mechanism. 
+The three grippers are placed in 120 degrees apart as shown in Figure~\ref{}. 
+The gripper has a wedge shape that moves radially and mate with the rotor that also has an identical edge shape. 
+The gripper is actuated by a cryogenic stepping motor. 
+We mounted the temperature sensor on the gripper arm and the rotor. 
+We also placed three heaters, thin-film resistors, on the rotor.
+We measure the temperature difference between the rotor and the gripper warm.
+Figure~\ref{} shows the linear relationship between the applied electrical heat and the temperature difference between the rotor and the gripper arm.
+We derive the Kapitza resistance of two metal surfaces at the interface from the slope.
+The corresponding resistance is $10^{3}$~K\/W, and the corresponding effective thermal conductance is $1$~mW\/K.
+The surfaces of the gripper and the rotor are not polished nor gold plated. 
+While we can increase the pressure between the two surfaces by applying more torque on the rotor we did not pursue this in order to mitigate the actuator to be stacked by applying too much torque.
+
 The three thin-film resistors (heater) and the three temperature sensor (Cernox) are mounted on the rotor. The resistive power is applied when the rotor magnet is held by the three grippers and we estimate the thermal conductance through the physical contact of the holder mechanism. 
 
-\subsection{Estimation of the rotor temperature}
+
+Once the rotor is levitating, the rotor temperature is difficult to estimate. We develop the calibration scheme to estimate the rotor temperature by using a thermometer mounted at the gripper arm.
+
+\begin{figure}[htb]
+   \centering
+   \includegraphics[width=90mm]{figureA.eps} % requires the graphicx package
+   \caption{example caption}
+   \label{fig:example}
+\end{figure}
+
+\begin{figure}[htb]
+   \centering
+   \includegraphics[width=80mm]{thermalcond.eps} % requires the graphicx package
+   \caption{example caption}
+   \label{fig:example}
+\end{figure}
+
+\begin{figure}[htb]
+   \centering
+   \includegraphics[width=80mm]{TemperatureEstimate.eps} % requires the graphicx package
+   \caption{example caption}
+   \label{fig:example}
+\end{figure}
+
+
+
+\section{Estimation of the rotor temperature}
 When the rotor is un-gripped by the grippers and the applied the resistive power from the heater. The rotor temperature increases as compared the surrounding temperature due to the low thermal conductivity without any contact. Then, the grippers hold the rotor, and we monitor the temperature of the rotor and the gripper. The gripper temperature increases from the baseline temperature and starts following the rotor temperature. We fit the temperature profile in two ways. One is to use the exponential form and the other is a linear fit by employing the temperature range from the maximum temperature to the 3dB point. We extrapolate to the moment of the contact and compare the temperature between the actual rotor temperature and the estimated temperature. The difference between the two temperatures are less than 2 degrees without any correction. 
 
 \section{Conclusion}
@@ -545,7 +591,7 @@ Appendix two text goes here.
 
 
 The authors would like to thank...
-
+This work was supported by MEXT KAKENHI Grant Numbers JP15H05441 and JSPS Core-to-Core Program, A. Advanced Research Networks.
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
