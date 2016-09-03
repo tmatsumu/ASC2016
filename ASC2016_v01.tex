@@ -517,6 +517,7 @@ The gripper has a wedge shape that moves radially and mate with the rotor that a
 The gripper is actuated by a cryogenic stepping motor. 
 We mounted the temperature sensor on the gripper arm and the rotor. 
 We also placed three heaters, thin-film resistors, on the rotor.
+The thermal conductance via wires for the thermometers and heaters are estimated as less than 3~$\mu$W.
 We measure the temperature difference between the rotor and the gripper warm.
 Figure~\ref{} shows the linear relationship between the applied electrical heat and the temperature difference between the rotor and the gripper arm.
 We derive the Kapitza resistance of two metal surfaces at the interface from the slope.
@@ -524,10 +525,8 @@ The corresponding resistance is $10^{3}$~K\/W, and the corresponding effective t
 The surfaces of the gripper and the rotor are not polished nor gold plated. 
 While we can increase the pressure between the two surfaces by applying more torque on the rotor we did not pursue this in order to mitigate the actuator to be stacked by applying too much torque.
 
-The three thin-film resistors (heater) and the three temperature sensor (Cernox) are mounted on the rotor. The resistive power is applied when the rotor magnet is held by the three grippers and we estimate the thermal conductance through the physical contact of the holder mechanism. 
-
-
-Once the rotor is levitating, the rotor temperature is difficult to estimate. We develop the calibration scheme to estimate the rotor temperature by using a thermometer mounted at the gripper arm.
+%The three thin-film resistors (heater) and the three temperature sensor (Cernox) are mounted on the rotor. The resistive power is applied when the rotor magnet is held by the three grippers and we estimate the thermal conductance through the physical contact of the holder mechanism. 
+%Once the rotor is levitating, the rotor temperature is difficult to estimate. We develop the calibration scheme to estimate the rotor temperature by using a thermometer mounted at the gripper arm.
 
 \begin{figure}[htb]
    \centering
@@ -550,10 +549,25 @@ Once the rotor is levitating, the rotor temperature is difficult to estimate. We
    \label{fig:example}
 \end{figure}
 
-
-
 \section{Estimation of the rotor temperature}
-When the rotor is un-gripped by the grippers and the applied the resistive power from the heater. The rotor temperature increases as compared the surrounding temperature due to the low thermal conductivity without any contact. Then, the grippers hold the rotor, and we monitor the temperature of the rotor and the gripper. The gripper temperature increases from the baseline temperature and starts following the rotor temperature. We fit the temperature profile in two ways. One is to use the exponential form and the other is a linear fit by employing the temperature range from the maximum temperature to the 3dB point. We extrapolate to the moment of the contact and compare the temperature between the actual rotor temperature and the estimated temperature. The difference between the two temperatures are less than 2 degrees without any correction. 
+When the rotor is levitating, it is difficult to estimate its temperature remotely. 
+We conduct the experiment to estimate the rotor temperature by monitoring the temperature on the gripper arm at the moment of holding the rotor. 
+The sequence of the experiment is following. 
+The three gripper holds the rotor until the rotor is themalized. 
+Once the rotor is thermalized, the rotor is released and thus the rotor levitates. 
+We apply the electrical power to the rotor heater.
+The rotor temperature increases due to the no thermal pass except the radiation and resistive wires. 
+Once the temperature of the rotor increases to about 10~K, we grip the rotor using the three grippers. 
+We monitor the temperature rise of the three temperature sensors mounted on each gripper arm. 
+Figure~\ref{} shows the temperature profile as a function of time. 
+
+The gripper temperature spikes up when the gripper makes a contact to the rotor. 
+The rotor temperature starts decreasing together with the gripper temperature once the gripper temperature reaches to maximum.
+We fit the gripper temperature data with two functional forms, linear and exponential. 
+When the temperature difference between the stator and the levitating rotor is small, the exponential form fits well. 
+On the other hand, the temperature difference is large, the linear function fit better. 
+For the linear fit, we select that gripper temperature data between $(T_g^{max}+T_g^{min})/2$ and $T_g^{max}$, where $T_g^{max}$ and $T_g^{min}$ are the maximum and the minimum temperature in this profile.
+The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K.
 
 \section{Conclusion}
 
