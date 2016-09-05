@@ -373,6 +373,8 @@
 \author{Yuki Sakurai, Tomotake Matsumura, Hirokazu Kataza, Shin Utsunomiya, Ryo Yamamoto
 \thanks{Y. Sakurai and S. Utsunomiya are with University of Tokyo, Kavli-Institute of Physics, Mathematics and Universe (Kavli-IPMU), Kashiwa, Chiba, Japan, e-mail: yuki.sakurai@ipmu.jp}
 \thanks{T. Matsumura, H. Kataza, R. Yamamoto are with Institute of Space and Astronautical Science (ISAS), Japan Aerospace Exploration Agency (JAXA), Sagamihara, Kanagawa 252-5210, JAPAN}
+\thanks{H. Kataza is with University of Tokyo, Department of Astronomy.}
+\thanks{R. Yamamoto is with University of Tokyo, Department of Physics.}
 \thanks{Manuscript received April 19, 2005; revised August 26, 2015.}}
 
 % note the % following the last \IEEEmembership and also \thanks - 
@@ -429,7 +431,7 @@
 % As a general rule, do not put math, special symbols or citations
 % in the abstract or keywords.
 \begin{abstract}
-The abstract goes here.
+We present the thermal characteristics of a superconducting magnetic bearing (SMB) system that is designed for a polarization modulator for a cosmic microwave background (CMB) polarization experiment. We have focused on two types of measurements. One is to estimate the heat dissipation from friction of the SMB. We have conducted the spin down measurements and we projected the heat dissipation of 3~mW from the hysteresis contribution. We also find the consistency to the Bean's model between the magnetic field inhomogeneity and the hysteresis loss. We also characterize the thermal characteristics of the holder mechanism for the SMB system at below 10~K. We measure the thermal conductance of a grip holder, which is the thermal path when the rotor is held in place at the time of field cooling. The effective thermal conductance is 1~mW/K without any extra-effort to polish nor gold plate the contact surface. We also implement a technique to estimate a levitating rotor temperature by using a thermal conductance of a gripper contact. The gripper thermometer follows the temperature of the rotor. The extrapolated temperature recovers the rotor temperature with the difference of less than 2~K without any correction.
 \end{abstract}
 
 % Note that keywords are not normally used for peerreview papers.
@@ -455,75 +457,153 @@ Superconducting magnetic bearing
 
 
 \section{Introduction}
-% The very first letter is a 2 line initial drop letter followed
-% by the rest of the first word in caps.
-% 
-% form to use if the first word consists of a single letter:
-% \IEEEPARstart{A}{demo} file is ....
-% 
-% form to use if you need the single drop letter followed by
-% normal text (unknown if ever used by the IEEE):
-% \IEEEPARstart{A}{}demo file is ....
-% 
-% Some journals put the first two words in caps:
-% \IEEEPARstart{T}{his demo} file is ....
-% 
-% Here we have the typical use of a "T" for an initial drop letter
-% and "HIS" in caps to complete the first word.
-\IEEEPARstart{A}{} cosmic microwave background (CMB) radiation is a relic radiation from the big bang. We can measure this radiation today as an oldest light from the universe. One of the fundamental questions in cosmology is the existence of cosmic inflation just after the beginning of the universe, and the theory of inflation predicts the existence of the curl pattern, called B-mode, in the CMB polarization pattern if the inflation exists. The world-wide effort to hunt this signal is in progress from the ground, balloon, and space-borne telescopes, and the corresponding instrumental development is ongoing. One of the key instruments is called polarization modulator, which consists of a half-wave plate that rotates at a few Hz at the cryogenic temperature. Due to the faint signal, the half-wave plate (HWP) has to be maintained below about 10~K in order to minimize its own thermal emission. As a result, this system requires to achieve the continuous rotation at the cryogenic temperature. The standard mechanical bearing dissipates too much heat and  thus it is important to employ the rotational mechanism that allows to rotate with minimal heat dissipation. A superconducting magnetic bearing (SMB) is a contactless bearing, and thus it achieves a continuous rotation at cryogenic temperature environment with minimal energy loss from friction. This technology is particularly attractive for various applications, including flywheel energy storages and high efficiency motor bearings. A polarization modulator for a cosmic microwave background polarization experiment is one of the applications which the SMB can play a key role to enable the continuous rotation at below 10 K environment. 
+\IEEEPARstart{A}{} cosmic microwave background (CMB) radiation is a relic radiation from the big bang. We can measure this radiation today as an oldest light from the universe. One of the fundamental questions in cosmology is to probe the presence of cosmic inflation just after the beginning of the universe. Although such this event may be happening as early as $\sim10^{-38}$ seconds after the beginning of the universe, the theory of inflation predicts the existence of the divergence free pattern in the CMB polarization, called B-mode, with the presence of the inflation. The world-wide effort to hunt this signal is in progress from ground, balloon, and space-borne telescopes, and the corresponding instrumental development is ongoing. One of the key instruments for this type of measurements is called a polarization modulator, which consists of an optical element, a half-wave plate (HWP), that rotates at a few Hz at the cryogenic temperature. Due to the faint signal, the HWP has to be maintained below about 10~K in order to minimize its own thermal emission. As a result, this system requires to achieve the continuous rotation at about 10~K or below. The standard mechanical bearing dissipates too much heat, and thus it is important to employ the rotational mechanism that allows to rotate with minimal heat dissipation at the cryogenic temperature. A superconducting magnetic bearing (SMB) is a contactless bearing, and thus it achieves a continuous rotation at cryogenic temperature environment with minimal energy loss from friction. 
+This technology is particularly attractive for various applications, including flywheel energy storages and high efficiency motor bearings. 
+A polarization modulator for a CMB polarization experiment is one of the applications which the SMB can play a key role to enable the continuous rotation at below 10~K environment. 
+In the past, EBEX is a balloon-borne CMB experiment that employs the SMB system for the polarization modulator, and there is an increasing interest to apply this technology to a ground telescope and even to a satellite mission\cite{jklein}.
 
-We constructed the prototype rotational mechanism using an SMB that operates at 10~K. 
-The rotor magnet has to be held in place in order to achieve the field cooling. 
-Thus, we develop a holder mechanism. 
+While the contactless bearing, like SMB, can achieve very low deceleration but not zero. 
+This is due to the magnetic interaction between the rotor and the stator. 
+Previously we have conducted the experiment to estimate the energy loss using a scaled prototype SMB model (diameter of about ), and estimated the energy loss corresponds to the power dissipation of $19~\mu$W at 1~Hz under the vacuum environment below 10~K \cite{matsumura_eucas2015}. 
 
-In this paper we have conducted the two types of mesurements that are essential to understand for thermal ***. 
-First, we have conducted the spin down measurements with an SMB diametere of **.
-From this measurement, we have estimated the upper limit of the energy loss from the SMB. 
+In this paper we address the two questions.
+One is to estimate the heat dissipation from the non-zero friction for the SMB that has an opening diameter of about 400~mm, a typical size for a CMB polarization experiment. 
+We have conducted the spin down measurement to estimate the heat dissipation.
 
-Secondly, we have estimated the thermal conductance between the rotor and the stator when the rotor is held by the holder mechanism. 
-We also measure to estimate the levitating rotor temperature using this holder mechanism. 
+Secondly, due to the non-zero friction, the energy loss will eventually become heat. 
+A part of the heat goes to the stator and the rest goes to the rotor. 
+Since the rotor of the SMB does not have any physical contact once levitated, there is no direct access to measure the rotor temperature. 
+We implement the technique that is introduced by Klein et al. to estimate the rotor temperature and we demonstrate its functionality. 
 
+In this paper, we address the heat dissipation and the temperature estimation of the rotor magnet experimentally using the two experimental configurations. 
+First we describe the spin down measurements that is conducted at the room pressure using the liquid nitrogen. 
+Second we describe the demonstration of the technique to estimate to the rotor temperature.
+Finally we discuss our results and further challenges to be addressed. 
 
-\section{Heat dissipation from COF}
+\section{Heat dissipation from friction}
+We prepare an SMB system that has an opening diameter of 394~mm.
+The ring magnet consists of 16 segmented NdFeB magnets that is magnetized axially with the magnetic remnance of 1.24~T. 
+The ring shaped HTS array is formed in a ring shape using three-seeded YBCO tiles. 
+Both the ring magnet and the HTS tiles are fabricated by ATZ~\cite{atz}.
+
+Because we are in preparation of a large cryostat to encase this system yet, we conducted the spin down measurements using a Styrofoam bucket with liquid nitrogen. 
+We measured the spin down with the two different levitation height, the gap between the bottom of the rotor and the top of the HTS, as 3~mm and 6~mm. 
+The rotational frequency is monitored by using an optical chopper directly mounted on the rotor and an optical encoder, LED and Silicon photodiode.
+We also mount a Hall sensor at the gap between the rotor magnet and the HTS tiles. 
+Thus, we monitor the magnetic field as the rotor magnet rotates during the spin down. 
+
+The bottom panel of Figure~\ref{fig:spindown} shows the rotational frequency as a function of time.
+The rotor is freely spinning down at the levitation height of 6~mm. 
+The left panel of Figure~\ref{fig:Bval} shows the magnetic field variation as a function of the time from the same spin down measurement. 
+The magnetic field inhomogeneity is originated due to the two reasons: one is due to the gap between the segments, and the other is the inhomogeneity of each segment magnet itself. 
+
+We model this spin down profile as the following deceleration, $\alpha$, 
+\begin{eqnarray}
+\alpha = 2\pi \frac{df}{dt} = a_0 + 2\pi a_1 f,
+\label{eq:spindown}
+\end{eqnarray}
+where $f$ is the rotational frequency. 
+
+We fit the data with Eq.~\ref{eq:spindown} and the fitted parameters are summarized in Tab.~\ref{tab:fitpar}\cite{hull_review}.
+We also parameterize the magnetic field inhomogeneity in two ways. 
+One is to compute the histogram of the magnetic field variation, fit with the Gaussian form, e$^{-(B-\bar{B})/2\sigma_B}$ and extract $\sigma_B$ as a measure of the inhomogeneity.
+The other is to employ the difference between the maximum and the minimum within one period of revolution. 
+
+According to the Bean's model, the energy loss, $\Delta E$ due to the hysteresis is modelled as 
+\begin{eqnarray}
+\Delta E \propto \frac{(\Delta B)^3}{J_c}
+\label{eq:bean}
+\end{eqnarray}
+where $\Delta B$ is the magnetic field inhomogeneity and $J_c$ is the critical current. 
+In Eq.~\ref{eq:spindown}, the first term represents the hysteresis loss. 
+We compare the fitted $a_0$ and $\sigma_B$. 
+We form the ratio as
+\begin{eqnarray}
+\frac{a_0(h=6\mbox{mm})}{a_0(h=3\mbox{mm})} / \frac{\sigma^3_B(h=6\mbox{mm})}{\sigma^3_B(h=3\mbox{mm})} = 1.3.
+\label{eq:beanmodelcheck}
+\end{eqnarray}
+Without any correction the relationship between $a_0$ and $\sigma_B$ scales similar to the Bean's model. 
+When the magnetic field variation is quantified as 
+\begin{eqnarray}
+\Delta B = B_{max} - B_{min},
+\label{eq:bmax-bmin}
+\end{eqnarray}
+this definition captures the spiky feature in the magnetic field. 
+In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} appear as 5.1. 
+Although it is beyond the scope of this paper, we identify the interesting question about what is the proper figure-of-merit to define the magnetic field variation when the rotor magnet consists of a segmented magnet and thus the gap produces a spiky magnetic field inhomogeneity. 
+
+The second term, $a_1$, represents the eddy current loss as well as air friction.
+We believe that the fitted $a_1$ is dominated by the air friction due to the test condition. 
+
+Given the fitted parameters, we project the heat dissipation given the energy loss. 
+We only accounted $a_0$ from this measurements. 
+\begin{eqnarray}
+P_{h} = \tau_{drag} \omega = I \alpha(a_1=0) \omega,
+\label{eq:energyloss}
+\end{eqnarray}
+where $\omega$ is the angular speed.
+The expected power dissipation due to the friction is 3~mW at the levitation height of 6~mm. 
+This can be realized by designing the SMB system that is run in vacuum with use of non-metallic material or slotted metal in surrounding structures to minimize the eddy current loss.
+The further suppression of this power dissipation can be expected by minimizing the magnetic field inhomogeneity of the rotor magnet.
+We are currently addressing this design optimization and will report in the future paper. 
+
+\begin{figure}[htb]
+   \centering
+   \includegraphics[width=70mm]{D400mm.eps} \\
+   \vspace{3mm}
+   \includegraphics[width=75mm]{spindown.eps} 
+   \caption{Top: The experimental setup for the spin down measurements for $D=395$~mm. Bottom: The rotational frequency as a function of time.}
+   \label{fig:spindown}
+\end{figure}
+
+\begin{figure}[htb]
+   \centering
+   \includegraphics[width=85mm]{magneticfieldvariation.eps} % requires the graphicx package
+   \caption{Left: The magnetic field inhomogeneity as a function of time for $D=395$~mm SMB system. Right: The histogram of the magnetic field. The red line is the results of the Gaussian fit. }
+   \label{fig:Bval}
+\end{figure}
+
 
 % Requires the booktabs if the memoir class is not being used
-\begin{table}[htbp]
+\begin{table*}[t]
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
-   \begin{tabular}{c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
-	    & Diameter [mm] & $h$ [mm] & $a_0$ & $a_1$  \\ \hline
-Rotor1 &  *85~mm* &   &  &     \\
-Rotor1 & *85~mm* &   &   &    \\
-Rotor2 & *360~mm*  &   &    &   \\
+   \begin{tabular}{c|c|c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
+	    $D$ & $h$& $P_p$ & $\sigma_B$ &$a_0$ & $a_1$  & $P_h$\\ 
+	     $[mm]$ & $[mm]$ & $[atm]$ & $[kG]$ & $[s^{-2}]$  & $[s^{-2}]$  & $[W]$ \\ \hline
+	395 & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
+	395 & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
+	51 & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$ 
    \end{tabular}
-   \caption{Check the exact diameter.}
-   \label{tab:booktabs}
-\end{table}
+   \caption{The summary of the fit to the spin down measurements and the extrapolation to the heat dissipation. $D$ is the inner diameter of the rotor. $h$ is the gap between the rotor magnet surface and the HTS surface. $P_p$ is the pressure at the time of the spin down measurements. $P_h$ is the projected heat dissipation from the $a_0$ term.}
+   \label{tab:fitpar}
+\end{table*}
 
 \section{Thermal conductance through the holder mechanism}
-The prototype SMB system is constructed. 
-The detailed description of this prototype system is in Matsumura et al.~\cite{}. 
-The entire system is enclosed in a GM cryostat and cooled down to the lowest temperature of about 6~K.
+A scaled prototype SMB system is constructed. 
+The detailed description of this prototype system is in Matsumura et al.~\cite{matsumura_eucas2015}. 
+This system is a scaled model of the SMB system that is described in the previous section, and the opening diameter of the rotor is 51~mm.
+The entire system is enclosed in a GM cryostat and is cooled down to the lowest temperature of about 6~K.
 
 The cooling sequence is following. 
 The rotor magnet is held by the three grippers when the SMB is cooled from the room temperature to the temperature of about 6~K. 
 The YBCO is field-cooled by the magnetic field of the rotor. 
-Once the rotor is thermalized by the conduction through the three gripper arms, the rotor is released and it levitates. 
+Once the rotor is thermalized by conduction through the three gripper arms, the rotor is released and it levitates. 
 
 \subsection{Thermal conductivity of the holder mechanism}
 The thermal conductance between the stator and the rotor during the cool down process is purely limited by the physical contact of the holder mechanism. 
-The three grippers are placed in 120 degrees apart as shown in Figure~\ref{}. 
-The gripper has a wedge shape that moves radially and mate with the rotor that also has an identical edge shape. 
+The three grippers are placed in 120 degrees apart as shown in Figure~\ref{fig:figureA}. 
+Each gripper has a wedge shape that moves radially and mate with the rotor that also has an identical but negative wedge shape. 
 The gripper is actuated by a cryogenic stepping motor. 
-We mounted the temperature sensor on the gripper arm and the rotor. 
+We mounted a temperature sensor on the gripper arm.
 We also placed three heaters, thin-film resistors, on the rotor.
-The thermal conductance via wires for the thermometers and heaters are estimated as less than 3~$\mu$W.
+The thermal conductance via wires for the thermometers and heaters are estimated as less than 6~$\mu$W.
 We measure the temperature difference between the rotor and the gripper warm.
-Figure~\ref{} shows the linear relationship between the applied electrical heat and the temperature difference between the rotor and the gripper arm.
+Figure~\ref{fig:thermalcond} shows the linear relationship between the applied electrical heat and the temperature difference between the rotor and the gripper arm.
 We derive the Kapitza resistance of two metal surfaces at the interface from the slope.
-The corresponding resistance is $10^{3}$~K/W, and the corresponding effective thermal conductance is $1$~mW/K.
+The thermal resistance is $10^{3}$~K/W, and the corresponding effective thermal conductance is $1$~mW/K.
 The gripper arm and the rotor holder is made of aluminum.
-The surfaces of the gripper and the rotor are not polished nor gold plated. 
+The surfaces of the gripper and the rotor are not polished nor gold plated, and thus there is a room for improvement. 
 While we can increase the pressure between the two surfaces by applying more torque on the rotor we did not pursue this in order to mitigate the actuator to be stacked by applying too much torque.
 
 %The three thin-film resistors (heater) and the three temperature sensor (Cernox) are mounted on the rotor. The resistive power is applied when the rotor magnet is held by the three grippers and we estimate the thermal conductance through the physical contact of the holder mechanism. 
@@ -540,27 +620,27 @@ While we can increase the pressure between the two surfaces by applying more tor
    \centering
    \includegraphics[width=80mm]{thermalcond.eps} % requires the graphicx package
    \caption{The relationship between the applied power and the temperature difference between the rotor and the gripper arm. }
-   \label{fig:example}
+   \label{fig:thermalcond}
 \end{figure}
 
 \begin{figure}[htb]
    \centering
    \includegraphics[width=80mm]{TemperatureEstimate.eps} % requires the graphicx package
    \caption{The temperature profile of the grippers and the rotor as a function of time. }
-   \label{fig:example}
+   \label{fig:TemperatureEstimate}
 \end{figure}
 
-\section{Estimation of the rotor temperature}
-When the rotor is levitating, it is difficult to estimate its temperature remotely. 
-We conduct the experiment to estimate the rotor temperature by monitoring the temperature on the gripper arm at the moment of holding the rotor. 
+\subsection{Estimation of the rotor temperature}
+When a rotor is levitating, it is difficult to estimate its temperature remotely. 
+We conduct the experiment to estimate the rotor temperature by monitoring the temperature on the gripper arm at the moment of grabbing the rotor. 
 The sequence of the experiment is following. 
 The three gripper holds the rotor until the rotor is themalized. 
-Once the rotor is thermalized, the rotor is released and thus the rotor levitates. 
+Once the rotor is thermalized, the rotor is released from the three grippers and thus the rotor levitates. 
 We apply the electrical power to the rotor heater.
 The rotor temperature increases due to the no thermal pass except the radiation and resistive wires. 
 Once the temperature of the rotor increases to about 10~K, we grip the rotor using the three grippers. 
 We monitor the temperature rise of the three temperature sensors mounted on each gripper arm. 
-Figure~\ref{} shows the temperature profile as a function of time. 
+Figure~\ref{fig:TemperatureEstimate} shows the temperature profile as a function of time. 
 
 The gripper temperature spikes up when the gripper makes a contact to the rotor. 
 The rotor temperature starts decreasing together with the gripper temperature once the gripper temperature reaches to maximum.
@@ -571,42 +651,16 @@ For the linear fit, we select that gripper temperature data between $(T_g^{max}+
 The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K.
 
 \section{Conclusion}
+We have conducted two experiments. The spin down measurements allow us to estimate to the heat dissipation from the rotor friction with the rotor diameter of D=394 mm. From this measurement, the expected heat dissipation from the hysteresis is in the order of mW. The further effort of minimizing the magnetic field inhomogeniety can potentially reduce the energy loss.Second, we have conducted the thermal conductance measurements of the holder mechanism in order to facilitate the technique to understand the thermal performance of the SMB at below 10~K.
+We measure the 1 mW/K of thermal conductance.
+We estimate the levitating rotor temperature by extrapolating the gripper temperature after the contact, and we conclude that we can project the rotor temperature of less than 2~K without introducing any correction method. 
 
-
-
-
-
-% if have a single appendix:
-%\appendix[Proof of the Zonklar Equations]
-% or
-%\appendix  % for no appendix heading
-% do not use \section anymore after \appendix, only \section*
-% is possibly needed
-
-% use appendices with more than one appendix
-% then use \section to start each appendix
-% you must declare a \section before using any
-% \subsection or using \label (\appendices by itself
-% starts a section numbered zero.)
-%
-
-
-\appendices
-\section{Proof of the First Zonklar Equation}
-Appendix one text goes here.
-
-% you can choose not to have a title for an appendix
-% if you want by leaving the argument blank
-\section{}
-Appendix two text goes here.
+This work is a part of the programs to develop the polarization modulator using SMB for a CMB polarization experiment including the satellite platform. 
 
 
 % use section* for acknowledgment
 \section*{Acknowledgment}
-
-
-The authors would like to thank...
-This work was supported by MEXT KAKENHI Grant Numbers JP15H05441 and JSPS Core-to-Core Program, A. Advanced Research Networks.
+The author would like to thank to Dr. H. Imada at ISAS/JAXA. This work was supported by MEXT KAKENHI Grant Numbers JP15H05441 and JSPS Core-to-Core Program, A. Advanced Research Networks.
 
 % Can use something like this to put references on a page
 % by themselves when using endfloat and the captionsoff option.
@@ -638,12 +692,16 @@ This work was supported by MEXT KAKENHI Grant Numbers JP15H05441 and JSPS Core-t
 % <OR> manually copy in the resultant .bbl file
 % set second argument of \begin to the number of references
 % (used to reserve space for the reference number labels box)
-\begin{thebibliography}{1}
+\begin{thebibliography}{99}
 
-\bibitem{IEEEhowto:kopka}
-H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
-  0.5em minus 0.4em\relax Harlow, England: Addison-Wesley, 1999.
-
+\bibitem{hull_review}
+J. Hull, Topical review: Superconducting bearings, Superconductor Science, 110, 140, Technology 13 (1).
+\bibitem{jklein}
+J. Klein et al.,“A cryogenic half-wave plate polarimeter using a super- conducting magnetic bearing,” in Proc. 8th Cryogen. Opt. Syst. Instrum., San Diego, CA, USA, Aug. 2011, pp. 1–10.
+\bibitem{matsumura_eucas2015}
+T. Matsumura, H. Kataza, S. Utsunomiya, R. Yamamoto, M. Hazumi, N. Katayama, Prototype design and performance of a polarization modulator for use in space using a superconducting magnetic bearing, IEEE, TRANSACTIONS ON APPLIED SUPERCONDUCTIVITY 26 (3).
+\bibitem{atz}
+ATZ, http://www.atz-gmbh.com.
 \end{thebibliography}
 
 % biography section
@@ -656,23 +714,6 @@ H.~Kopka and P.~W. Daly, \emph{A Guide to \LaTeX}, 3rd~ed.\hskip 1em plus
 % simpler here.)
 %\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{mshell}}]{Michael Shell}
 % or if you just want to reserve a space for a photo:
-
-\begin{IEEEbiography}{Michael Shell}
-Biography text here.
-\end{IEEEbiography}
-
-% if you will not have a photo at all:
-\begin{IEEEbiographynophoto}{John Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
-
-% insert where needed to balance the two columns on the last page with
-% biographies
-%\newpage
-
-\begin{IEEEbiographynophoto}{Jane Doe}
-Biography text here.
-\end{IEEEbiographynophoto}
 
 % You can push biographies down or up by placing
 % a \vfill before or after them. The appropriate
