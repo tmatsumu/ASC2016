@@ -659,12 +659,16 @@ Figure~\ref{fig:TemperatureEstimate} shows the temperature profile as a function
 
 The gripper temperature spikes up when the gripper makes a contact to the rotor.
 The rotor temperature starts decreasing together with the gripper temperature once the gripper temperature reaches to maximum.
-We fit the gripper temperature data with two functional forms, linear and exponential.
+\cred{ The function of temperature decreasing is expected to depend on the specific heat and the thermal conductivity of the gripper arm and the rotor holder.}
+\cred{ The specific heat and the thermal conductivity is possible to vary with temperature and the pressure between two surfaces of the gripper and the rotor holder.}
+\cred{ In order to cover these effects,} we fit the gripper temperature data with two functional forms, linear and exponential.
 When the temperature difference between the stator and the levitating rotor is small, the exponential form fits well.
 On the other hand, the temperature difference is large, the linear function fit better.
 For the linear fit, we select that gripper temperature data between $T_g^{max}$ and$(T_g^{max}+T_g^{min})/2$,
 where $T_g^{max}$ and $T_g^{min}$ are the maximum and the minimum temperature of the gripper in this profile.
-The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K.
+
+The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K,
+\cred{ even if we use either of the fit functions. }
 
 \section{Conclusion}
 We have conducted two experiments.
