@@ -562,7 +562,7 @@ We are currently addressing this design optimization and will report in the futu
    \includegraphics[width=70mm]{D400mm.eps} \\
    \vspace{3mm}
    \includegraphics[width=75mm]{spindown.eps}
-   \caption{Top: The experimental setup for the spin down measurements for $D=395$~mm. Bottom: The rotational frequency as a function of time \cred{at the levitation height of 6~mm}.}
+   \caption{Top: The experimental setup for the spin down measurements for $D=394$~mm. Bottom: The rotational frequency as a function of time \cred{at the levitation height of 6~mm}.}
    \label{fig:spindown}
 \end{figure}
 
@@ -586,7 +586,7 @@ We are currently addressing this design optimization and will report in the futu
 	\cred{65} & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$
    \end{tabular}
    \caption{The summary of the fit parameters from the spin down measurements and the extrapolation to the heat dissipation.
-     $D$ is the inner diameter of the rotor.
+     $D$ is the inner diameter of the rotor magnet.
      $h$ is the levitation height.
      $P_p$ is the pressure at the time of the spin down measurements.
      $P_h$ is the projected heat dissipation from the $a_0$ term.}
@@ -603,7 +603,7 @@ The entire system is enclosed in a GM cryostat and is cooled down to the lowest 
 
 The cooling sequence is following.
 The rotor magnet is held by the three grippers when the SMB is cooled from the room temperature to about 6~K.
-The YBCO is field-cooled by the magnetic field of the rotor.
+The YBCO array is field-cooled by the magnetic field of the rotor.
 Once the rotor is thermalized by conduction through the three gripper arms, the rotor is released and it levitates.
 
 \subsection{Thermal conductivity of the holder mechanism}
@@ -614,13 +614,13 @@ The gripper is actuated by a cryogenic stepping motor.
 We mounted a temperature sensor on the gripper arm.
 We also placed three heaters, thin-film resistors, on the rotor.
 The thermal conductance via wires for the thermometers and heaters are estimated as less than 6~$\mu$W.
-We measure the temperature difference between the rotor and the gripper warm.
+We measure the temperature difference between the rotor and the gripper arm.
 Figure~\ref{fig:thermalcond} shows the linear relationship between the applied electrical heat and the temperature difference between the rotor and the gripper arm.
-We derive the Kapitza resistance of two metal surfaces at the interface from the slope.
+We derive the effective thermal resistance between the two temperature sensors, including two metal surfaces, from the slope.
 The thermal resistance is $10^{3}$~K/W, and the corresponding effective thermal conductance is $1$~mW/K.
 The gripper arm and the rotor holder is made of aluminum.
 The surfaces of the gripper and the rotor are not polished nor gold plated, and thus there is a room for improvement.
-While we can increase the pressure between the two surfaces by applying more torque on the rotor we did not pursue this in order to mitigate the actuator to be stacked by applying too much torque.
+While we can increase the pressure between the two surfaces by applying more torque to the gripper against to the rotor we did not pursue this in order to mitigate the actuator to be stacked by applying too much torque.
 
 %The three thin-film resistors (heater) and the three temperature sensor (Cernox) are mounted on the rotor. The resistive power is applied when the rotor magnet is held by the three grippers and we estimate the thermal conductance through the physical contact of the holder mechanism.
 %Once the rotor is levitating, the rotor temperature is difficult to estimate. We develop the calibration scheme to estimate the rotor temperature by using a thermometer mounted at the gripper arm.
@@ -648,20 +648,21 @@ While we can increase the pressure between the two surfaces by applying more tor
 
 \subsection{Estimation of the rotor temperature}
 When a rotor is levitating, it is difficult to estimate its temperature remotely.
-We conduct the experiment to estimate the rotor temperature by monitoring the temperature on the gripper arm at the moment of grabbing the rotor.
+We conduct an experiment to estimate the rotor temperature by monitoring the temperature on the gripper arm at the moment of grabbing the rotor.
 The sequence of the experiment is following.
-The three gripper holds the rotor until the rotor is thermalized.
+The three grippers hold the rotor until the rotor is thermalized.
 %Once the rotor is thermalized,
 \cred{Then}, the rotor is released from the three grippers and thus the rotor levitates.
 We apply the electrical power to the rotor heater.
 The rotor temperature increases due to the no thermal pass except the radiation and resistive wires.
-Once the temperature of the rotor increases to about 10~K, \cred{the rotor grabbed using the grippers.}
+Once the temperature of the rotor increases to about 10~K, \cred{the rotor grabs using the grippers.}
 %we grip the rotor using the three grippers.
 We monitor the temperature rise of the three temperature sensors mounted on each gripper arm.
 Figure~\ref{fig:TemperatureEstimate} shows the temperature profile as a function of time.
 
 The gripper temperature spikes up when the gripper makes a contact to the rotor.
 The rotor temperature starts decreasing together with the gripper temperature once the gripper temperature reaches to maximum.
+
 \cred{ The function of temperature decreasing is expected to depend on the specific heat and the thermal conductivity of the gripper arm and the rotor holder.}
 \cred{ The specific heat and the thermal conductivity is possible to vary with temperature and the pressure between two surfaces of the gripper and the rotor holder.}
 \cred{ In order to cover these effects,} we fit the gripper temperature data with two functional forms, linear and exponential.
