@@ -469,16 +469,16 @@ In the past, EBEX is a balloon-borne CMB experiment that employs an SMB system f
 
 While the contactless bearing, like SMB, can achieve very low deceleration but not zero.
 This is due to the magnetic interaction between a rotor and a stator.
-Previously we have conducted an experiment to estimate the energy loss using a scaled prototype SMB model (diameter of \cred{65~mm}), and estimated the energy loss corresponds to the power dissipation of $19~\mu$W at 1~Hz under the vacuum environment below 10~K \cite{matsumura_eucas2015}.
+Previously we have conducted an experiment to estimate the energy loss using a scaled prototype SMB model (diameter of 65~mm), and estimated the energy loss corresponds to the power dissipation of $19~\mu$W at 1~Hz under the vacuum environment below 10~K \cite{matsumura_eucas2015}.
 
-In this paper we address the two key questions \cred{about non-zero friction of the SMB.}
+In this paper we address the two key questions about non-zero friction of the SMB.
 One is to estimate the heat dissipation due the friction from a bearing, which has an opening diameter of about 400~mm, a typical size for a CMB polarization experiment.
-\cred{We have conducted a spin down measurement at room pressure using liquid nitrogen to estimate the heat dissipation.}
+We have conducted a spin down measurement at room pressure using liquid nitrogen to estimate the heat dissipation.
 
-Secondly, the energy loss \cred{from the non-zero friction} will eventually become heat.
+Secondly, the energy loss from the non-zero friction will eventually become heat.
 A part of the heat goes to the stator and the rest goes to the rotor.
 Since the rotor of SMB does not have any physical contact once levitates, there is no direct access to measure the rotor temperature.
-We implement the technique that is introduced by Klein et al. to estimate the rotor temperature and we demonstrate its functionality \cred{\cite{jklein}}.
+We implement the technique that is introduced by Klein et al. to estimate the rotor temperature and we demonstrate its functionality \cite{jklein}.
 
 %In this paper, we address the heat dissipation and the temperature estimation of the rotor magnet experimentally using the two experimental configurations.
 %First we describe the spin down measurements that is conducted at the room pressure using the liquid nitrogen.
@@ -508,15 +508,15 @@ We model this spin down profile as the following deceleration, $\alpha$,
 \label{eq:spindown}
 \end{eqnarray}
 where $f$ is the rotational frequency\cite{hull_review}.
-\cred{The first term, $a_0$, represents the hysteresis loss, and the second term, $a_1$, represents the eddy current loss as well as air friction.
-We believe that the fitted $a_1$ is dominated by the air friction due to the test condition.}
+The first term, $a_0$, represents the hysteresis loss, and the second term, $a_1$, represents the eddy current loss as well as air friction.
+We believe that the fitted $a_1$ is dominated by the air friction due to the test condition.
 We fit the data with Eq.~\ref{eq:spindown} and the fitted parameters are summarized in Tab.~\ref{tab:fitpar}.
 
 We also parameterized the magnetic field inhomogeneity in two ways.
 One is to compute the histogram of the magnetic field variation, fit with the Gaussian form, e$^{-(B-\bar{B})^2/2\sigma_B}$ and extract $\sigma_B^2$ as a measure of the inhomogeneity.
 The other is to employ the difference between the maximum and the minimum within one period of revolution.
 
-According to the Bean's model \cred{\cite{beans_model_1,beans_model_2}}, the energy loss, $\Delta E$, due to the hysteresis is modelled as
+According to the Bean's model \cite{beans_model_1,beans_model_2}, the energy loss, $\Delta E$, due to the hysteresis is modelled as
 \begin{eqnarray}
 \Delta E \propto \frac{(\Delta B)^3}{J_c}
 \label{eq:bean}
@@ -525,12 +525,12 @@ where $\Delta B$ is the magnetic field inhomogeneity and $J_c$ is the critical c
 
 %We compare the fitted $a_0$ and $\sigma_B$.
 %We form the ratio as
-\cred{The fitted $a_0$ and $\sigma_B$ are compared by taking the ratio as}
+The fitted $a_0$ and $\sigma_B$ are compared by taking the ratio as
 \begin{eqnarray}
 \frac{a_0(h=6\mbox{mm})}{a_0(h=3\mbox{mm})} / \frac{\sigma^3_B(h=6\mbox{mm})}{\sigma^3_B(h=3\mbox{mm})} = 1.3,
 \label{eq:beanmodelcheck}
 \end{eqnarray}
-\cred{where $h$ is the levitation height.}
+where $h$ is the levitation height.
 Without any correction, the relationship between $a_0$ and $\sigma_B$ scales similar to the Bean's model.
 When the magnetic field variation is quantified as
 \begin{eqnarray}
@@ -538,12 +538,12 @@ When the magnetic field variation is quantified as
 \label{eq:bmax-bmin}
 \end{eqnarray}
 this definition captures the spiky features in the magnetic field.
-In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} \cred{changes to 5.1 from 1.3.}
+In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} changes to 5.1 from 1.3.
 %% appear as 5.1.
-%We use the magnetic field that is measured at the fixed radial position and this radial position corresponds to the rotor magnetic field close to be maximum after the field cooled. 
-We identify the interesting question about what is the proper figure-of-merit to define the magnetic field variation when the rotor magnet consists of a segmented magnet and thus the gap produces a spiky magnetic field inhomogeneity. 
-Also the measurement of the magnetic field relies on one radiation position and the magnetic field is not fully mapped in three dimension. 
-Although it is beyond the scope of this paper, the further modelling the rotor magnetic field can provide more detailed characterizations of the magnetic field dependence to the hysteresis loss. 
+%We use the magnetic field that is measured at the fixed radial position and this radial position corresponds to the rotor magnetic field close to be maximum after the field cooled.
+We identify the interesting question about what is the proper figure-of-merit to define the magnetic field variation when the rotor magnet consists of a segmented magnet and thus the gap produces a spiky magnetic field inhomogeneity.
+Also the measurement of the magnetic field relies on one radiation position and the magnetic field is not fully mapped in three dimension.
+Although it is beyond the scope of this paper, the further modelling the rotor magnetic field can provide more detailed characterizations of the magnetic field dependence to the hysteresis loss.
 
 Given the fitted parameters, we project the heat dissipation, $P_{h}$, given the energy loss.
 We only accounted $a_0$ from this measurements.
@@ -562,7 +562,7 @@ We are currently addressing this design optimization and will report in the futu
    \includegraphics[width=70mm]{D400mm.eps} \\
    \vspace{3mm}
    \includegraphics[width=75mm]{spindown.eps}
-   \caption{Top: The experimental setup for the spin down measurements for $D=394$~mm. Bottom: The rotational frequency as a function of time \cred{at the levitation height of 6~mm}.}
+   \caption{Top: The experimental setup for the spin down measurements for $D=395$~mm. Bottom: The rotational frequency as a function of time at the levitation height of 6~mm.}
    \label{fig:spindown}
 \end{figure}
 
@@ -581,9 +581,9 @@ We are currently addressing this design optimization and will report in the futu
    \begin{tabular}{c|c|c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
 	    $D$ & $h$& $P_p$ & $\sigma_B$ &$a_0$ & $a_1$  & $P_h$\\
 	     $[\mbox{mm}]$ & $[\mbox{mm}]$ & $[\mbox{atm}]$ & $[\mbox{kG}]$ & $[\mbox{s}^{-2}]$  & $[\mbox{s}^{-2}]$  & $[\mbox{W}]$ \\ \hline
-        \cred{394} & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
-	\cred{394} & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
-	\cred{65} & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$
+        394 & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
+	394 & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
+	65 & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$
    \end{tabular}
    \caption{The summary of the fit parameters from the spin down measurements and the extrapolation to the heat dissipation.
      $D$ is the inner diameter of the rotor magnet.
@@ -598,7 +598,7 @@ We are currently addressing this design optimization and will report in the futu
 \section{Thermal characterization of the rotor temperature}
 A scaled prototype SMB system is constructed.
 The detailed description of this prototype system is in Matsumura et al.~\cite{matsumura_eucas2015}.
-This system is a scaled model of the SMB system that is described in the previous section, and the opening diameter of the rotor is \cred{65~mm.}
+This system is a scaled model of the SMB system that is described in the previous section, and the opening diameter of the rotor is 65~mm.
 The entire system is enclosed in a GM cryostat and is cooled down to the lowest temperature of about 6~K.
 
 The cooling sequence is following.
@@ -652,33 +652,36 @@ We conduct an experiment to estimate the rotor temperature by monitoring the tem
 The sequence of the experiment is following.
 The three grippers hold the rotor until the rotor is thermalized.
 %Once the rotor is thermalized,
-\cred{Then}, the rotor is released from the three grippers and thus the rotor levitates.
+Then, the rotor is released from the three grippers and thus the rotor levitates.
 We apply the electrical power to the rotor heater.
-The rotor temperature increases due to the no thermal pass except the radiation and resistive wires.
-Once the temperature of the rotor increases to about 10~K, \cred{the rotor grabs using the grippers.}
+The rotor temperature increases due to no thermal pass except the radiation and resistive wires.
+Once the temperature of the rotor increases to about 10~K, the rotor is grabbed using the grippers.
 %we grip the rotor using the three grippers.
 We monitor the temperature rise of the three temperature sensors mounted on each gripper arm.
-Figure~\ref{fig:TemperatureEstimate} shows the temperature profile as a function of time.
 
+Figure~\ref{fig:TemperatureEstimate} shows the temperature profile as a function of time.
 The gripper temperature spikes up when the gripper makes a contact to the rotor.
 The rotor temperature starts decreasing together with the gripper temperature once the gripper temperature reaches to maximum.
-
-\cred{ The function of temperature decreasing is expected to depend on the specific heat and the thermal conductivity of the gripper arm and the rotor holder.}
-\cred{ The specific heat and the thermal conductivity is possible to vary with temperature and the pressure between two surfaces of the gripper and the rotor holder.}
-\cred{ In order to cover these effects,} we fit the gripper temperature data with two functional forms, linear and exponential.
+We fit the gripper temperature data with two functional forms, linear and exponential.
 When the temperature difference between the stator and the levitating rotor is small, the exponential form fits well.
-On the other hand, the temperature difference is large, the linear function fit better.
-For the linear fit, we select that gripper temperature data between $T_g^{max}$ and$(T_g^{max}+T_g^{min})/2$,
+On the other hand, the temperature difference is large, the linear function fits better.
+For the linear fit, we select the gripper temperature data between $T_g^{max}$ and$(T_g^{max}+T_g^{min})/2$,
 where $T_g^{max}$ and $T_g^{min}$ are the maximum and the minimum temperature of the gripper in this profile.
 
-The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K,
-\cred{ even if we use either of the fit functions. }
+The reason why we choose the two functional forms are followings.
+If the specific heat and the thermal conductivity of the gripper and the rotor are constant with a temperature, the temperature profile in Figure~\ref{fig:TemperatureEstimate} is expected to be an exponential functional form.
+As the temperature change is significant enough to take into account the temperature dependence of the thermal conductivity and the specific heat, the temperature profile is expected to be linear. 
+%The temperature decreasing is expected to depend on the specific heat and the thermal conductivity of the gripper arm and the rotor holder.
+%The specific heat and the thermal conductivity are possible to vary with temperature and the pressure between two surfaces of the gripper and the rotor holder.
+
+The extrapolated temperature from the fit at the time of the gripping shows the lower temperature than the actual rotor temperature by less than 2~K, even if we use either of the fit functions.
 
 \section{Conclusion}
 We have conducted two experiments.
-The spin down measurements allow us to estimate to the heat dissipation from the rotor friction with the rotor diameter of \cred{D=394~mm.}
+The spin down measurements allow us to estimate the heat dissipation from the rotor friction with the rotor diameter of D=394~mm.
 From this measurement, the expected heat dissipation from the hysteresis is in the order of mW.
 The further effort of minimizing the magnetic field inhomogeneity can potentially reduce the energy loss.
+
 Second, we have conducted the thermal conductance measurements of the holder mechanism in order to facilitate the technique to understand the thermal performance of the SMB at below 10~K.
 We measure the 1 mW/K of thermal conductance.
 We estimate the levitating rotor temperature by extrapolating the gripper temperature after the contact, and we conclude that we can project the rotor temperature of less than 2~K without introducing any correction method.
