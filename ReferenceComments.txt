@@ -1,3 +1,38 @@
+[Action Items]
+
+(done) - Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.
+
+- Section II : Because the impact of the air friction is probably much more important than the "magnetic friction", the conclusion of the proposed analysis are difficult to assess.
+
+- Section II : The detailed description of the system is missing (we guess that the system is similar to Fig.3).
+
+- Section II : The experimental protocol is incomplete (for example it is unclear how the rotor is made to rotate).
+
+- Section III : Such results might not be adequate for a journal publication.
+
+- The comparison between a0 and a1 is not clear (p.2 L52-59). Please develop this aspect.
+
+- Too many sentences are written in poor English,  that make the manuscript difficult to fully understand (for example p.4 L59-60). Please, rewrite it.
+
+(done) - The equation (3) is not clear. Substituting the values of Table I in (3), I don't obtain the same result.
+       Answer :
+       	      Here is the process of calculation,
+	      a0(h=3mm) = 5.7 × 10^{-3} , a0(h=6mm) = 2.1 × 10^{-4} , sigma_B(h=3mm) = 5.7 × 10^{-2} , sigma_B(h=6mm) = 2.3 × 10^{-2}
+       	      a0(h=6mm) / a0(h=3mm) = 0.0900
+	      sigma_B(h=6mm)^{3} / sigma_B(h=3mm)^{3} = 0.0657
+       	      ( a0(h=6mm) / a0(h=3mm) ) / ( sigma_B(h=6mm)^{3} / sigma_B(h=3mm)^{3} ) = 1.362
+
+
+(done) - The value of Jc used in (2) is not identified.
+       Answer : we assume the J_c is a constant value in this comparison, so the specific value was not used. Add comments.
+
+- The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
+
+- Short references.
+
+(done) - Increase the font size in the figures. Some of them are too small.
+
+
 
 [Reference Comments]
 
@@ -27,11 +62,11 @@ I recommend publication, after fixing the above.
 Reviewer: 3
 
 <b>Comments and suggestions for the author(s) (do not identify yourself or your institution).</b>
-- The equation (3) is not clear. Substituting the values of Table I in (3), I don't obtain the same result.
+ - The equation (3) is not clear. Substituting the values of Table I in (3), I don't obtain the same result.
 
 - In the paper, the value of Jc used in (2) is not identified.
 
-- Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.
+[done] - Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.
 
 - The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
 

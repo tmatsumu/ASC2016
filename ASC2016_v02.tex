@@ -522,7 +522,7 @@ According to the Bean's model \cite{beans_model_1,beans_model_2}, the energy los
 \Delta E \propto \frac{(\Delta B)^3}{J_c}
 \label{eq:bean}
 \end{eqnarray}
-where $\Delta B$ is the magnetic field inhomogeneity and $J_c$ is the critical current.
+where $\Delta B$ is the magnetic field inhomogeneity and $J_c$ is the YBCO critical current.
 
 %We compare the fitted $a_0$ and $\sigma_B$.
 %We form the ratio as
@@ -532,6 +532,7 @@ The fitted $a_0$ and $\sigma_B$ are compared by taking the ratio as
 \label{eq:beanmodelcheck}
 \end{eqnarray}
 where $h$ is the levitation height.
+In this comparison, we assume the $J_c$ is a constant value regardless of the levitation height.
 Without any correction, the relationship between $a_0$ and $\sigma_B$ scales similar to the Bean's model.
 When the magnetic field variation is quantified as
 \begin{eqnarray}
@@ -544,11 +545,11 @@ In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} changes
 %We use the magnetic field that is measured at the fixed radial position and this radial position corresponds to the rotor magnetic field close to be maximum after the field cooled.
 
 Our results match to the $\Delta B^3$ scaling using $\sigma_B$ instead of the difference of the magnetic field between the maximum and the minimum.
-The difference of the two conventions is essentially to either include or exclude the spiky features in the magnetic field inhomogeneity. 
+The difference of the two conventions is essentially to either include or exclude the spiky features in the magnetic field inhomogeneity.
 Although this is beyond the scope of the paper, it is interesting to pursue the numerical simulation and study the hysteresis loss with the actual measured magnetic field.
-The current measured magnetic field is only conducted at the single radial position. 
-It is more informative to measure the three dimensional magnetic field structure and provide them as an simulation input. 
-%The fact that the measure of the magnetic field inhomogeneity matches to the $\Delta B^3$ scaling with $\sigma_B$ as compared to the maximum minus minimum the following question. 
+The current measured magnetic field is only conducted at the single radial position.
+It is more informative to measure the three dimensional magnetic field structure and provide them as an simulation input.
+%The fact that the measure of the magnetic field inhomogeneity matches to the $\Delta B^3$ scaling with $\sigma_B$ as compared to the maximum minus minimum the following question.
 %We identify the interesting question about what is the proper figure-of-merit to define the magnetic field variation when the rotor magnet consists of a segmented magnet and thus the gap produces a spiky magnetic field inhomogeneity.
 %Also the measurement of the magnetic field relies on one radiation position and the magnetic field is not fully mapped in three dimension.
 %Although it is beyond the scope of this paper, the further modelling the rotor magnetic field can provide more detailed characterizations of the magnetic field dependence to the hysteresis loss.
@@ -576,8 +577,8 @@ We are currently addressing this design optimization and will report in the futu
 
 \begin{figure}[htb]
    \centering
-   \includegraphics[width=85mm]{magneticfieldvariation.eps} % requires the graphicx package
-   \caption{Left: The magnetic field inhomogeneity as a function of time for $D=395$~mm SMB system. Right: The histogram of the magnetic field. The red line is the results of the Gaussian fit. }
+   \includegraphics[width=85mm]{magneticfieldvariation_rev.eps} % requires the graphicx package
+   \caption{Left: The magnetic field inhomogeneity as a function of time for $D=395$~mm SMB system at the levitation height of 6~mm. Right: The histogram of the magnetic field at the levitation height of 6~mm. The red line is the results of the Gaussian fit. }
    \label{fig:Bval}
 \end{figure}
 
@@ -635,7 +636,7 @@ While we can increase the pressure between the two surfaces by applying more tor
 
 \begin{figure}[htb]
    \centering
-   \includegraphics[width=90mm]{figureA.eps} % requires the graphicx package
+   \includegraphics[width=90mm]{figureA_rev.eps} % requires the graphicx package
    \caption{Top: a cross-sectional view of the gripper and the rotor. Bottom right: The top view of the rotor and the three grippers. Bottom left: The gripper.}
    \label{fig:figureA}
 \end{figure}
@@ -649,7 +650,7 @@ While we can increase the pressure between the two surfaces by applying more tor
 
 \begin{figure}[htb]
    \centering
-   \includegraphics[width=80mm]{TemperatureEstimate.eps} % requires the graphicx package
+   \includegraphics[width=80mm]{TemperatureEstimate_rev.eps} % requires the graphicx package
    \caption{The temperature profile of the grippers and the rotor as a function of time. }
    \label{fig:TemperatureEstimate}
 \end{figure}
@@ -678,7 +679,7 @@ where $T_g^{max}$ and $T_g^{min}$ are the maximum and the minimum temperature of
 
 The reason why we choose the two functional forms are followings.
 If the specific heat and the thermal conductivity of the gripper and the rotor are constant with a temperature, the temperature profile in Figure~\ref{fig:TemperatureEstimate} is expected to be an exponential functional form.
-As the temperature change is significant enough to take into account the temperature dependence of the thermal conductivity and the specific heat, the temperature profile is expected to be linear. 
+As the temperature change is significant enough to take into account the temperature dependence of the thermal conductivity and the specific heat, the temperature profile is expected to be linear.
 %The temperature decreasing is expected to depend on the specific heat and the thermal conductivity of the gripper arm and the rotor holder.
 %The specific heat and the thermal conductivity are possible to vary with temperature and the pressure between two surfaces of the gripper and the rotor holder.
 
