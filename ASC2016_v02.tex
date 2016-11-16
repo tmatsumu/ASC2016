@@ -487,7 +487,7 @@ We implement the technique that is introduced by Klein et al. to estimate the ro
 Finally we discuss our results and further challenges to be addressed.
 
 \section{Heat dissipation from friction}
-We prepare an SMB system that has an opening diameter of 394~mm.
+We prepare an SMB system that has an opening diameter of 384~mm.
 The ring magnet consists of 16 segmented NdFeB magnets that is magnetized axially with the magnetic remnance of 1.24~T.
 The ring shaped HTS array is formed in a ring shape using three-seeded YBCO tiles.
 Both the ring magnet and the HTS tiles are fabricated by ATZ~\cite{atz}.
@@ -497,6 +497,9 @@ We measured the spin down with the two different levitation height, the gap betw
 The rotational frequency is monitored by using an optical chopper directly mounted on the rotor and an optical encoder, LED and Silicon photo-diode.
 We also mount a Hall sensor at the gap between the rotor magnet and the HTS tiles.
 Thus, we monitor the magnetic field as the rotor magnet rotates during the spin down.
+Since this is the prototype SMB system, no driving system for rotation is installed.
+Therefore, the initial drive for spin down measurement is done by hand.
+This ambiguity is improved by introducing a drive system into the prepared large cryostat.
 
 The bottom panel of Figure~\ref{fig:spindown} shows the rotational frequency as a function of time.
 The rotor is freely spinning down at the levitation height of 6~mm.
@@ -555,23 +558,43 @@ It is more informative to measure the three dimensional magnetic field structure
 %Although it is beyond the scope of this paper, the further modelling the rotor magnetic field can provide more detailed characterizations of the magnetic field dependence to the hysteresis loss.
 
 Given the fitted parameters, we project the heat dissipation, $P_{h}$, given the energy loss.
-We only accounted $a_0$ from this measurements.
+The energy loss is expressed as
 \begin{eqnarray}
-P_{h} = \tau_{drag} \omega = I \alpha(a_1=0) \omega,
+P_{h} = \tau \omega = I \alpha \omega,
 \label{eq:energyloss}
 \end{eqnarray}
-where $\omega$ is the angular speed.
-The expected power dissipation due to the friction is 3~mW at the levitation height of 6~mm.
+where $\tau$ is the torque of the rotor, and $\omega$ is the angular speed.
+The angular speed is set as $\omega = 2 \pi$ which is the target value of continuous rotation used in the polarization modulator.
+$\alpha$ is the deceleration as shown in Eq.~\ref{eq:spindown}, where we only accounted $a_0$ ($a_1=0$) to consider the heat dissipation from the magnetic friction.
+$I$ is the inertia of the rotor calculated by
+\begin{eqnarray}
+I = \frac{m \delta r^{2}}{2},
+\label{eq:inertia}
+\end{eqnarray}
+where $m$ is the weight of the rotor as $m=3~\mathrm{kg}$, and $\delta r$ is the width of the ring shaped rotor as $\delta r = 34~\mathrm{mm}$.
+
+The expected power dissipation due to the friction is 2.8~mW at the levitation height of 6~mm.
 This can be realized by designing the SMB system that is run in vacuum with use of non-metallic material or slotted metal in surrounding structures to minimize the eddy current loss.
 The further suppression of this power dissipation can be expected by minimizing the magnetic field inhomogeneity of the rotor magnet.
 We are currently addressing this design optimization and will report in the future paper.
+
+%% We only accounted $a_0$ from this measurements.
+%% \begin{eqnarray}
+%% P_{h} = \tau_{drag} \omega = I \alpha(a_1=0) \omega,
+%% \label{eq:energyloss}
+%% \end{eqnarray}
+%% where $\omega$ is the angular speed.
+%% The expected power dissipation due to the friction is 3~mW at the levitation height of 6~mm.
+%% This can be realized by designing the SMB system that is run in vacuum with use of non-metallic material or slotted metal in surrounding structures to minimize the eddy current loss.
+%% The further suppression of this power dissipation can be expected by minimizing the magnetic field inhomogeneity of the rotor magnet.
+%% We are currently addressing this design optimization and will report in the future paper.
 
 \begin{figure}[htb]
    \centering
    \includegraphics[width=70mm]{D400mm.eps} \\
    \vspace{3mm}
    \includegraphics[width=75mm]{spindown.eps}
-   \caption{Top: The experimental setup for the spin down measurements for $D=395$~mm. Bottom: The rotational frequency as a function of time at the levitation height of 6~mm.}
+   \caption{Top: The experimental setup for the spin down measurements for $D=384$~mm. Bottom: The rotational frequency as a function of time at the levitation height of 6~mm.}
    \label{fig:spindown}
 \end{figure}
 
@@ -590,8 +613,8 @@ We are currently addressing this design optimization and will report in the futu
    \begin{tabular}{c|c|c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
 	    $D$ & $h$& $P_p$ & $\sigma_B$ &$a_0$ & $a_1$  & $P_h$\\
 	     $[\mbox{mm}]$ & $[\mbox{mm}]$ & $[\mbox{atm}]$ & $[\mbox{kG}]$ & $[\mbox{s}^{-2}]$  & $[\mbox{s}^{-2}]$  & $[\mbox{W}]$ \\ \hline
-        394 & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
-	394 & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
+        384 & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
+	384 & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
 	65 & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$
    \end{tabular}
    \caption{The summary of the fit parameters from the spin down measurements and the extrapolation to the heat dissipation.
@@ -687,7 +710,7 @@ The extrapolated temperature from the fit at the time of the gripping shows the 
 
 \section{Conclusion}
 We have conducted two experiments.
-The spin down measurements allow us to estimate the heat dissipation from the rotor friction with the rotor diameter of D=394~mm.
+The spin down measurements allow us to estimate the heat dissipation from the rotor friction with the rotor diameter of D=384~mm.
 From this measurement, the expected heat dissipation from the hysteresis is in the order of mW.
 The further effort of minimizing the magnetic field inhomogeneity can potentially reduce the energy loss.
 

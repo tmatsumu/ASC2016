@@ -6,7 +6,7 @@
 
 - Section II : The detailed description of the system is missing (we guess that the system is similar to Fig.3).
 
-- Section II : The experimental protocol is incomplete (for example it is unclear how the rotor is made to rotate).
+(done? TBC)- Section II : The experimental protocol is incomplete (for example it is unclear how the rotor is made to rotate).
 
 - Section III : Such results might not be adequate for a journal publication.
 
@@ -24,9 +24,10 @@
 
 
 (done) - The value of Jc used in (2) is not identified.
-       Answer : we assume the J_c is a constant value in this comparison, so the specific value was not used. Add comments.
+       Answer : we assume the J_c is a constant value in this comparison, so the specific value was not used. Added some comments.
 
-- The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
+(done) - The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
+       Answer : Added a detailed explanation.
 
 - Short references.
 
