@@ -1,0 +1,86 @@
+[Action Items]
+
+(done) - Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.
+       Answer: Added explanation.
+
+(done) - Section II : Because the impact of the air friction is probably much more important than the "magnetic friction", the conclusion of the proposed analysis are difficult to assess.
+       Answer: We assumed that the air friction affects only a_1. We derived the result only considering a_0 which represents the magnetic friction.
+       	       We revised the description about a_0 and a1.
+
+- Section II : The detailed description of the system is missing (we guess that the system is similar to Fig.3).
+
+(done? TBC)- Section II : The experimental protocol is incomplete (for example it is unclear how the rotor is made to rotate).
+
+- Section III : Such results might not be adequate for a journal publication.
+
+(done) - The comparison between a0 and a1 is not clear (p.2 L52-59). Please develop this aspect.
+       Answer: We revised the description about a_0 and a1.
+
+- Too many sentences are written in poor English,  that make the manuscript difficult to fully understand (for example p.4 L59-60). Please, rewrite it.
+
+(done) - The equation (3) is not clear. Substituting the values of Table I in (3), I don't obtain the same result.
+       Answer :
+       	      Here is the process of calculation,
+	      a0(h=3mm) = 5.7 × 10^{-3} , a0(h=6mm) = 2.1 × 10^{-4} , sigma_B(h=3mm) = 5.7 × 10^{-2} , sigma_B(h=6mm) = 2.3 × 10^{-2}
+       	      a0(h=6mm) / a0(h=3mm) = 0.0900
+	      sigma_B(h=6mm)^{3} / sigma_B(h=3mm)^{3} = 0.0657
+       	      ( a0(h=6mm) / a0(h=3mm) ) / ( sigma_B(h=6mm)^{3} / sigma_B(h=3mm)^{3} ) = 1.362
+
+
+(done) - The value of Jc used in (2) is not identified.
+       Answer : we assume the J_c is a constant value in this comparison, so the specific value was not used. Added some comments.
+
+(done) - The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
+       Answer : Added a detailed explanation.
+
+(done) - Short references.
+       Answer : Added two additional references.
+
+(done) - Increase the font size in the figures. Some of them are too small.
+       Answer : Done.
+
+
+[Reviwer's Comments]
+
+Reviewer: 1
+
+Comments and suggestions for the author(s) (do not identify yourself or your institution).</b>
+This article reports experimental results on a superconducting magnetic bearing (SMB) designed for the polarization modulator of a cosmic microwave background experiment.
+
+Section I is an introduction with only two references related to SMB for CMB experiments (one by the same group). This makes it difficult to evaluate the originality of the work.
+
+Section II reports experimental results on a 394 mm SMB tested at 77 K and room pressure. The authors measured the deceleration of the rotor, and tried from this dataset to estimate the hysteresis losses. Because the impact of the air friction is probably much more important than the "magnetic friction", the conclusion of the proposed analysis are difficult to assess. Besides, the detailed description of the system is missing (we guess that the system is similar to Fig.3), and the experimental protocol is incomplete (for example it is unclear how the rotor is made to rotate). The results are therefore not reproducible.
+
+Section III reports experimental results on a 65 mm SMB tested at 10 K in vacuum. This system was introduced in a previous article [3]. The authors measured here the thermal resistance of the "gripper", and checked that they could estimate the rotor temperature by stopping the rotation and using a linear/exponential regression. Such results might not be adequate for a journal publication.
+
+The English should be revised.
+
+Reviewer: 2
+
+<b>Comments and suggestions for the author(s) (do not identify yourself or your institution).</b>
+This work describes the work in progress for developing a device rotating an optical component (a half wave plate) in the framework of a system dedicated to the investigation of the cosmic microwave background. Basically the device consists of a magnet assembly (the rotor) levitating above a superconductor (the stator). Since the system must work in the vacuum, its thermal budget is of importance. The authors report two types of measurements dedicated to its characterization. The first one aims at determining the energy losses and the second one to estimate the corresponding temperature increase of the rotor.
+This is a very interesting application of magnetic levitation and the reported results deserve publication. However some aspects of the manuscript must be revised.
+1.   Too many sentences are written in poor English,  that make the manuscript difficult to fully understand (for example p.4 L59-60). Please, rewrite it.
+2.   The comparison between a0 and B is not clear (p.2 L52-59). Please develop this aspect.
+
+I recommend publication, after fixing the above.
+
+Reviewer: 3
+
+<b>Comments and suggestions for the author(s) (do not identify yourself or your institution).</b>
+ - The equation (3) is not clear. Substituting the values of Table I in (3), I don't obtain the same result.
+
+- In the paper, the value of Jc used in (2) is not identified.
+
+[done] - Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.
+
+- The authors should explain better how they obtain the losses value of 3mW due to friction, obtined by the equation (5), and which is the "omega" value used.
+
+- Short references.
+
+Reviewer: 4
+
+The paper needs a review of the text by a native English speaker. I suggest to look for one of the several companies that offer this service. In the current form, the manuscript can't be approved.
+Also, new references need to be introduced. Only 2 references about this topic is a very limited revision.
+Please, better discuss your results.
+Increase the font size in the figures. Some of them are too small.

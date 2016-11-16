@@ -1,4 +1,3 @@
-
 %% bare_jrnl.tex
 %% V1.4b
 %% 2015/08/26
@@ -60,6 +59,7 @@
 \usepackage{graphicx}
 \usepackage{cite}
 \usepackage{color}
+\usepackage{lineno}
 \def\cred{\textcolor{red}}
 
 % Some very useful LaTeX packages include:
@@ -463,10 +463,10 @@ One of the key instruments for this type of measurements is called a polarizatio
 Due to the faint signal, the HWP has to be maintained below about 10~K in order to minimize its own thermal emission.
 As a result, this system requires to achieve the continuous rotation at about 10~K or below.
 The standard mechanical bearing dissipates too much heat, and thus it is important to employ the rotational mechanism that allows to rotate with minimal heat dissipation at the cryogenic temperature.
-A superconducting magnetic bearing (SMB) is a contactless bearing, and thus it achieves a continuous rotation at cryogenic temperature environment with minimal energy loss from friction.
+A superconducting magnetic bearing (SMB) is a contactless bearing, and thus it achieves a continuous rotation at cryogenic temperature environment with minimal energy loss from friction \cite{hull_review}.
 This technology is particularly attractive for various applications, including flywheel energy storage and high efficiency motor bearings.
 A polarization modulator for a CMB polarization experiment is one of the applications which an SMB can play a key role to enable the continuous rotation at below 10~K environment.
-In the past, EBEX is a balloon-borne CMB experiment that employs an SMB system for the polarization modulator, and there is an increasing interest to apply this technology to a ground telescope and even to a satellite mission\cite{jklein}.
+In the past, EBEX is a balloon-borne CMB experiment that employs an SMB system for the polarization modulator \cite{jklein}, and there is an increasing interest to apply this technology to a ground telescope and even to a satellite mission \cite{litebird}.
 
 While the contactless bearing, like SMB, can achieve very low deceleration but not zero.
 This is due to the magnetic interaction between a rotor and a stator.
@@ -498,8 +498,7 @@ The rotational frequency is monitored by using an optical chopper directly mount
 We also mount a Hall sensor at the gap between the rotor magnet and the HTS tiles.
 Thus, we monitor the magnetic field as the rotor magnet rotates during the spin down.
 Since this is the prototype SMB system, no driving system for rotation is installed.
-Therefore, the initial drive for spin down measurement is done by hand.
-This ambiguity is improved by introducing a drive system into the prepared large cryostat.
+so that the initial drive for spin down measurement is done by hand.
 
 The bottom panel of Figure~\ref{fig:spindown} shows the rotational frequency as a function of time.
 The rotor is freely spinning down at the levitation height of 6~mm.
@@ -512,8 +511,10 @@ We model this spin down profile as the following deceleration, $\alpha$,
 \label{eq:spindown}
 \end{eqnarray}
 where $f$ is the rotational frequency\cite{hull_review}.
-The first term, $a_0$, represents the hysteresis loss, and the second term, $a_1$, represents the eddy current loss as well as air friction.
-We believe that the fitted $a_1$ is dominated by the air friction due to the test condition.
+We considered three main causes of the deceleration: the hysteresis loss of the magnet, the eddy current loss, and the air friction.
+The first term, $a_0$, is constant regardless of $f$, while The second term, $a_1$, is belong it.
+Therefore, the hysteresis loss is represented by $a_0$ term, and the eddy current loss and the air friction are represented by $a_1$ term.
+%% We believe that the fitted $a_1$ is dominated by the air friction due to the test condition.
 We fit the data with Eq.~\ref{eq:spindown} and the fitted parameters are summarized in Tab.~\ref{tab:fitpar}.
 
 We also parameterized the magnetic field inhomogeneity in two ways.
@@ -760,7 +761,9 @@ The author would like to thank to Dr. H. Imada at ISAS/JAXA. This work was suppo
 \bibitem{hull_review}
 J. Hull, Topical review: Superconducting bearings, Superconductor Science, 110, 140, Technology 13 (1).
 \bibitem{jklein}
-J. Klein et al.,“A cryogenic half-wave plate polarimeter using a super- conducting magnetic bearing,” in Proc. 8th Cryogen. Opt. Syst. Instrum., San Diego, CA, USA, Aug. 2011, pp. 1–10.
+J. Klein et al.,“A cryogenic half-wave plate polarimeter using a superconducting magnetic bearing,” in Proc. 8th Cryogen. Opt. Syst. Instrum., San Diego, CA, USA, Aug. 2011, pp. 1–10.
+\bibitem{litebird}
+T. Masumura et al., "LiteBIRD: mission overview and design tradeoffs", Proc. SPIE 9143, Space Telescopes and Instrumentation 2014, 91431F, Aug. 2014.
 \bibitem{matsumura_eucas2015}
 T. Matsumura, H. Kataza, S. Utsunomiya, R. Yamamoto, M. Hazumi, N. Katayama, Prototype design and performance of a polarization modulator for use in space using a superconducting magnetic bearing, IEEE, TRANSACTIONS ON APPLIED SUPERCONDUCTIVITY 26 (3).
 \bibitem{atz}
