@@ -526,33 +526,33 @@ According to the Bean's model \cite{beans_model_1,beans_model_2}, the energy los
 \Delta E \propto \frac{(\Delta B)^3}{J_c}
 \label{eq:bean}
 \end{eqnarray}
-where $\Delta B$ is the magnetic field inhomogeneity and $J_c$ is the YBCO critical current.
+where $\Delta B$ is the difference of the magnetic field between the maximum and the minimum and $J_c$ is the YBCO critical current.
 
 %We compare the fitted $a_0$ and $\sigma_B$.
 %We form the ratio as
-The fitted $a_0$ and $\sigma_B$ are compared by taking the ratio as
+The fitted $a_0$ and $\Delta B$ are compared by taking the ratio as
 \begin{eqnarray}
-\frac{a_0(h=6\mbox{mm})}{a_0(h=3\mbox{mm})} / \frac{\sigma^3_B(h=6\mbox{mm})}{\sigma^3_B(h=3\mbox{mm})} = 1.3,
+\frac{a_0(h=6\mbox{mm})}{a_0(h=3\mbox{mm})} / \frac{\Delta B^3(h=6\mbox{mm})}{\Delta B^3(h=3\mbox{mm})} = 1.1,
 \label{eq:beanmodelcheck}
 \end{eqnarray}
 where $h$ is the levitation height.
 In this comparison, we assume the $J_c$ is a constant value regardless of the levitation height.
-Without any correction, the relationship between $a_0$ and $\sigma_B$ scales similar to the Bean's model.
-When the magnetic field variation is quantified as
-\begin{eqnarray}
-\Delta B = B_{max} - B_{min},
-\label{eq:bmax-bmin}
-\end{eqnarray}
-this definition captures the spiky features in the magnetic field.
-In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} changes to 5.1 from 1.3.
+Without any correction, the relationship between $a_0$ and $\Delta B$ scales similar to the Bean's model.
+%% When the magnetic field variation is quantified as
+%% \begin{eqnarray}
+%% \Delta B = B_{max} - B_{min},
+%% \label{eq:bmax-bmin}
+%% \end{eqnarray}
+%% this definition captures the spiky features in the magnetic field.
+%% In this case, the previously defined ratio in Eq~\ref{eq:beanmodelcheck} changes to 5.1 from 1.3.
 %% appear as 5.1.
 %We use the magnetic field that is measured at the fixed radial position and this radial position corresponds to the rotor magnetic field close to be maximum after the field cooled.
 
-Our results match to the $\Delta B^3$ scaling using $\sigma_B$ instead of the difference of the magnetic field between the maximum and the minimum.
-The difference of the two conventions is essentially to either include or exclude the spiky features in the magnetic field inhomogeneity.
-Although this is beyond the scope of the paper, it is interesting to pursue the numerical simulation and study the hysteresis loss with the actual measured magnetic field.
-The current measured magnetic field is only conducted at the single radial position.
-It is more informative to measure the three dimensional magnetic field structure and provide them as an simulation input.
+%% Our results match to the $\Delta B^3$ scaling using $\sigma_B$ instead of the difference of the magnetic field between the maximum and the minimum.
+%% The difference of the two conventions is essentially to either include or exclude the spiky features in the magnetic field inhomogeneity.
+%% Although this is beyond the scope of the paper, it is interesting to pursue the numerical simulation and study the hysteresis loss with the actual measured magnetic field.
+%% The current measured magnetic field is only conducted at the single radial position.
+%% It is more informative to measure the three dimensional magnetic field structure and provide them as an simulation input.
 %The fact that the measure of the magnetic field inhomogeneity matches to the $\Delta B^3$ scaling with $\sigma_B$ as compared to the maximum minus minimum the following question.
 %We identify the interesting question about what is the proper figure-of-merit to define the magnetic field variation when the rotor magnet consists of a segmented magnet and thus the gap produces a spiky magnetic field inhomogeneity.
 %Also the measurement of the magnetic field relies on one radiation position and the magnetic field is not fully mapped in three dimension.
@@ -601,8 +601,8 @@ We are currently addressing this design optimization and will report in the futu
 
 \begin{figure}[htb]
    \centering
-   \includegraphics[width=90mm]{magneticfieldvariation_rev.eps} % requires the graphicx package
-   \caption{Left: The magnetic field inhomogeneity as a function of time for $D=384$~mm SMB system at the levitation height of 6~mm. Right: The histogram of the magnetic field at the levitation height of 6~mm. The red line is the results of the Gaussian fit. }
+   \includegraphics[width=80mm]{magneticfieldvariation_rev2.eps} % requires the graphicx package
+   \caption{The magnetic field inhomogeneity as a function of time for $D=384$~mm SMB system at the levitation height of 6~mm. }
    \label{fig:Bval}
 \end{figure}
 
@@ -612,10 +612,10 @@ We are currently addressing this design optimization and will report in the futu
    \centering
    %\topcaption{Table captions are better up top} % requires the topcapt package
    \begin{tabular}{c|c|c|c|c|c|c} % Column formatting, @{} suppresses leading/trailing space
-	    $D$ & $h$& $P_p$ & $\sigma_B$ &$a_0$ & $a_1$  & $P_h$\\
+	    $D$ & $h$& $P_p$ & $\Delta B$ &$a_0$ & $a_1$  & $P_h$\\
 	     $[\mbox{mm}]$ & $[\mbox{mm}]$ & $[\mbox{atm}]$ & $[\mbox{kG}]$ & $[\mbox{s}^{-2}]$  & $[\mbox{s}^{-2}]$  & $[\mbox{W}]$ \\ \hline
-        384 & 3  & 1  & $5.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
-	384 & 6  &  1 & $2.3\times10^{-2}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
+        384 & 3  & 1  & $7.7\times10^{-2}$ & $5.7\times10^{-3}$  & $1.2\times10^{-3}$ & $3.6\times10^{-2}$\\
+	384 & 6  &  1 & $1.3\times10^{-1}$ & $5.1\times10^{-4}$ & $7.6\times10^{-4}$ & $3.2\times10^{-3}$\\
 	65 & 6   &  $<10^{-8}$ & $2\times10^{-2}$ & $1.3\times10^{-3}$ & $2.2\times10^{-4}$ & $1.9\times10^{-5}$
    \end{tabular}
    \caption{The summary of the fit parameters from the spin down measurements and the extrapolation to the heat dissipation.
