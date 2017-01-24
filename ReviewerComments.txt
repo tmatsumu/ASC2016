@@ -1,3 +1,37 @@
+*******************
+**** Jan. 2017 ****
+*******************
+[Action Items]
+- Adjust Table I to fit with the IEEE TAS standard.
+- include additional references
+- the English should be further revised.
+(done) - in the last paragraph of section II, "hysteresis loss of the magnet" > "hysteresis loss of the superconductor"
+(done) - in the last paragraph of section II, specify the location of the eddy current losses
+- reorganization of the article structure
+
+
+[Review's comments]
+| Adjust Table I to fit with the IEEE TAS standard.
+| Also, the list of references is limited.
+| I suggest you to include additional references, contextualizing more precisely your research with others in this field.
+| You can use the 5th additional page for references without cost.
+|
+| Reviewer(s)' Comments to Author:|
+| Reviewer: 1
+|
+| 1) The readability has been greatly improved. Nevertheless, the English should be further revised.
+| 2) The logic behind the estimation of the hysteresis loss in the superconductor (a0 term contribution) is clarified. We propose the following minor modifications:
+| - in the last paragraph of section II, "hysteresis loss of the magnet" > "hysteresis loss of the superconductor"
+| - in the last paragraph of section II, specify the location of the eddy current losses
+| 3) The reorganization of the article structure is welcomed.
+|
+| We look forward to read about further reductions of losses in SMB for CMB polarization experiment.
+
+
+
+*******************
+**** Nov. 2016 ****
+*******************
 [Action Items]
 
 (done) - Figure 2 must explain if this those results are in case of h=6.0 mm or h= 3.0 mm.

@@ -6,7 +6,7 @@
 ###############################################################################
 
 
-FILE    := ASC2016_v02
+FILE    := ASC2016_v03
 TEX     := platex
 REFGREP := grep "^LaTeX Warning: Label(s) may have changed."
 REF     := $(FILE).bib
