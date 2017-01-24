@@ -1,11 +1,14 @@
+
 *******************
 **** Jan. 2017 ****
 *******************
-[Action Items]
 
+!!!! DUE DATE FOR REVISION: 03-Feb-2017 !!!!!
+
+[Action Items]
 - include additional references
-- the English should be further revised.
-- reorganization of the article structure
+- the English should be further revised
+- reorganization of the article structure is welcomed
 
 (done) - Adjust Table I to fit with the IEEE TAS standard.
 (done) - in the last paragraph of section II, "hysteresis loss of the magnet" > "hysteresis loss of the superconductor"
